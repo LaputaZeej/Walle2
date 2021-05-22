@@ -1,0 +1,37 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+println("==============a=============")
+buildscript {
+    apply from: "bugu_common.gradle"
+    ext {
+        versions.kotlin_version = '1.4.32'
+        versions.kotlin_version = '1.4.32'
+    }
+    repositories {
+        println("==============0=============")
+        google()
+        jcenter()
+    }
+    dependencies {
+        println("==============1=============")
+        classpath "com.android.tools.build:gradle:${versions.gradle_version}"
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:${versions.kotlin_version}"
+        println("===============2============")
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    println("===============3============")
+    repositories {
+        println("===============4============")
+        google()
+        jcenter()
+    }
+}
+
+task clean(type: Delete) {
+    println("===============5============ ${rootProject.buildDir.path}")
+    delete rootProject.buildDir
+}
+println("==============z=============")

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?><!--RelativeLayout-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/bcfRootLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_action_base"
+    android:orientation="vertical">
+
+    <com.blankj.swipepanel.SwipePanel
+        android:id="@+id/bcfSwipePanel"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        app:isTopCenter="true"
+        app:isTopEnabled="false"
+        app:leftDrawable="@drawable/ic_baseline_arrow_back_ios_24"
+        app:leftEdgeSize="20dp"
+        app:leftSwipeColor="@color/darkGray"
+        app:topDrawable="@drawable/ic_baseline_arrow_back_ios_24"
+        app:topEdgeSize="500dp"
+        app:topSwipeColor="@color/darkGray">
+
+    </com.blankj.swipepanel.SwipePanel>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:background="@drawable/shadow_shape" />
+
+    <RelativeLayout
+        android:id="@+id/bcfTitleRl"
+        android:layout_width="match_parent"
+        android:layout_height="32dp"
+        android:background="@drawable/bg_action_base_float_title"
+        android:paddingLeft="8dp"
+        android:paddingTop="4dp"
+        android:paddingRight="8dp"
+        android:paddingBottom="4dp">
+
+        <ImageView
+            android:id="@+id/bcfCloseIv"
+            android:layout_width="40dp"
+            android:layout_height="24dp"
+            android:layout_centerVertical="true"
+            android:background="@drawable/bg_action_base_close"
+            android:src="@drawable/ic_baseline_arrow_back_ios_24" />
+
+        <TextView
+            android:id="@+id/bcfTitleTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_toLeftOf="@id/bcfAdjustIv"
+            android:layout_toRightOf="@id/bcfCloseIv"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="1"
+            android:textColor="@color/darkGrayDark"
+            android:textSize="@dimen/font_big"
+            android:textStyle="bold"
+            tools:text="title" />
+
+        <ImageView
+            android:id="@+id/bcfAdjustIv"
+            android:layout_width="40dp"
+            android:layout_height="24dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/bg_action_adjust"
+            android:src="@drawable/ic_baseline_arrow_back_ios_24" />
+
+    </RelativeLayout>
+
+</LinearLayout>

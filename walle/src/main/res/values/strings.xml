@@ -1,0 +1,9 @@
+<resources>
+    <string name="action_name_phone">手机信息</string>
+    <string name="action_name_app">APP信息</string>
+    <string name="action_name_basic_open_debug">打开调试开关</string>
+    <string name="action_name_basic_clear_cache">清理缓存</string>
+    <string name="action_name_basic_local">本地语言</string>
+    <string name="action_name_logger">日志</string>
+    <string name="str_todo">未实现</string>
+</resources>

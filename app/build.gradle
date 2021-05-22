@@ -1,0 +1,59 @@
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+}
+
+android {
+    compileSdkVersion versions.compileSdkVersion
+    buildToolsVersion versions.buildToolsVersion
+
+    defaultConfig {
+        applicationId "com.bugull.android"
+        minSdkVersion versions.minSdkVersion
+        targetSdkVersion versions.targetSdkVersion
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: "libs", include: ["*.jar"])
+    implementation deps.kotlin
+    implementation deps.androidx_core
+    implementation deps.constraintlayout
+    implementation deps.androidx_appcompat
+    implementation deps.material
+
+    implementation deps.junit
+    implementation deps.junit_ext
+    implementation deps.espresso
+    androidTestImplementation deps.rules
+
+    implementation deps.work_runtime
+    implementation deps.lifecycle_extensions
+    implementation deps.lifecycle_livedata
+    implementation deps.lifecycle_viewmodel
+    implementation deps.lifecycle_runtime
+    implementation deps.coroutines_core
+    implementation deps.coroutines_android
+
+    implementation project(":walle")
+
+
+}
